@@ -1,0 +1,116 @@
+body {
+    background-color: var(--clr-primary-light);
+    color: var(--clr-primary-dark);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.wrapper {
+    background-color: var(--clr-primary-dark);
+    color: var(--clr-primary-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+        cursor: pointer;
+        filter:  brightness(0) invert(1);
+    }
+}
+.mobile-view {
+    display: none;
+    background-color: var(--clr-secondary-light);
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid;
+    padding-inline: 1.5rem;
+
+    ul:first-child {
+        /* border: 1px solid; */
+        margin-block: 1rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+        width: 100%;
+    }
+
+    li {
+        display: flex;
+        justify-content: start;
+        list-style: none;
+        margin-block: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        /* padding-inline: 1rem; */
+        img {
+            margin-right: 0.875rem;
+        }
+    }
+    
+    li:hover {
+        cursor: pointer;
+        background-color: rgb(68, 68, 68, 0.4);
+    }
+}
+.projects-container {
+    /* border: 1px solid; */
+    width: 100%;
+    font-size: 1.75rem;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    .add-projects-btn {
+        display: flex;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        img {
+            margin-right: 0.875rem;
+        }
+    }
+}
+main {
+    min-height: 100dvh;
+}
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    margin-block: 1.5rem;
+    .section-title {
+        font-size: 2rem;
+        margin-inline: 0.75rem;
+        margin-top: 0.75rem;
+    }
+    .add-task-btn {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.275rem;
+        padding: 1rem;
+        img {
+            margin-left: 0.25rem;
+        }
+    }
+}
+.attribution {
+    font-size: 0.875rem;
+    text-align: center;
+    a {
+        color: oklch(45.9% 0.187 3.815);
+    }
+
+    a:hover,
+    a:focus {
+        color: oklch(43.2% 0.232 292.759);
+    }
+
+    a:visited {
+        color: oklch(44.8% 0.119 151.328);
+    }
+} 
