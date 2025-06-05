@@ -24,13 +24,14 @@ body {
         filter:  brightness(0) invert(1);
     }
 }
-.mobile-view {
+.mobile-view,
+.desktop-view {
     display: none;
     background-color: var(--clr-secondary-light);
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding-inline: 1.5rem;
 
     ul:first-child {
@@ -99,18 +100,29 @@ main {
     }
 }
 .attribution {
+    background-color: var(--clr-primary-dark);
+    color: var(--clr-primary-light);
     font-size: 0.875rem;
     text-align: center;
-    a {
-        color: oklch(45.9% 0.187 3.815);
-    }
-
-    a:hover,
-    a:focus {
-        color: oklch(43.2% 0.232 292.759);
-    }
-
-    a:visited {
-        color: oklch(44.8% 0.119 151.328);
-    }
 } 
+
+@media (min-width: 48rem) {
+    .menu-icon {
+        display: none;
+    }
+    main {
+        display: flex;
+    }
+    .desktop-view {
+        display: block;
+        padding-inline: 1.5rem;
+        .desktop-nav-wrapper {
+            padding-top: 0.125rem;
+            padding-inline: 0;
+            width: 100%;
+        }
+        ul:first-child {
+            padding-inline: 0;
+        } 
+    }
+}
